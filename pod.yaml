@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-phil
+  labels:
+    name: hello-phil
+spec:
+  containers:
+  - name: hello-world
+    image: docker.io/joedborg/hello-phil
+    command: ["/go/bin/app", "Phil"]
+  restartPolicy: Never
